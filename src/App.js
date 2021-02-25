@@ -2,7 +2,6 @@
 import React, { Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-
 // Components
 import Navbar from './components/Nav/Navbar.jsx';
 import Footer from './components/footer.components';
@@ -30,15 +29,13 @@ import AuthRoute from './utils/AuthRoute';
 import './App.css';
 
 const App = () => {
-
-
   return (
     <AuthProvider>
-      <main className='min-h-screen flex flex-col'>
+      <main className='flex flex-col min-h-screen'>
         <Navbar />
-        <Switch>
-          <ErrorBoundary>
-            <Suspense fallback={<Spinner />}>
+        <ErrorBoundary>
+          <Suspense fallback={<Spinner />}>
+            <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/about-us' component={AboutUs} />
               <Route exact path='/service-menu' component={ServiceMenu} />
@@ -48,9 +45,9 @@ const App = () => {
               <Route exact path='/gallery' component={Gallery} />
               <AuthRoute path='/admin' component={Admin} />
               <Route exact path='/login' component={Login} />
-            </Suspense>
-          </ErrorBoundary>
-        </Switch>
+            </Switch>
+          </Suspense>
+        </ErrorBoundary>
         <Footer />
       </main>
     </AuthProvider>
