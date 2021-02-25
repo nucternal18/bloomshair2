@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import ErrorMessage from '../components/ErrorMessage';
 
 // context
-import { AuthContext } from '../context/context';
+import { useAuth } from '../context/context';
 
 const variants = {
   hidden: { opacity: 0 },
@@ -15,9 +15,7 @@ const Login = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const { isError, clearErrors, login, isAuthenticated } = useContext(
-    AuthContext
-  );
+  const { isError, clearErrors, login, isAuthenticated } = useAuth();
   const { from } = props.location.state || { from: { pathname: '/admin' } };
 
   useEffect(() => {
@@ -39,9 +37,9 @@ const Login = (props) => {
   }
 
   return (
-    <section className='w-full flex-grow  bg-gray-200  py-8'>
+    <section className='flex-grow w-full py-8 bg-gray-200'>
       <div className='container mx-auto'>
-        <h1 className='my-8 text-center text-3xl'>
+        <h1 className='my-8 text-3xl text-center'>
           Account <span className='text-blue-700'>Login</span>
         </h1>
         <motion.div
@@ -52,15 +50,15 @@ const Login = (props) => {
         >
           <form
             onSubmit={onSubmit}
-            className='bg-white mx-2 sm:mx-auto sm:w-3/4 shadow-xl rounded px-8 pt-6 pb-8 mb-4'>
+            className='px-8 pt-6 pb-8 mx-2 mb-4 bg-white rounded shadow-xl sm:mx-auto sm:w-3/4'>
             <div className='mb-4'>
               <label
                 htmlFor='email'
-                className='block text-gray-700 text-base font-bold mb-2'>
+                className='block mb-2 text-base font-bold text-gray-700'>
                 Email Address
               </label>
               <input
-                className='shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none '
+                className='w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow-md appearance-none focus:outline-none '
                 type='email'
                 name='email'
                 value={email}
@@ -69,12 +67,12 @@ const Login = (props) => {
             </div>
             <div className='mb-8'>
               <label
-                className='block text-gray-700 text-base font-bold mb-2'
+                className='block mb-2 text-base font-bold text-gray-700'
                 htmlFor='password'>
                 Password
               </label>
               <input
-                className='shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none '
+                className='w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow-md appearance-none focus:outline-none '
                 type='password'
                 name='password'
                 value={password}
@@ -84,7 +82,7 @@ const Login = (props) => {
             {error && <ErrorMessage errorMessage={error} />}
             <div className='flex items-center justify-between'>
               <button
-                className='bg-blue-500 w-2/5 mr-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                className='w-2/5 px-4 py-2 mr-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline'
                 type='submit'>
                 Login
               </button>

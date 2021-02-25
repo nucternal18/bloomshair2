@@ -15,8 +15,8 @@ const variants = {
 
 const Home = () => {
   return (
-    <section className='w-full flex flex-col'>
-      <div className='homepage-card justify-center flex items-center text-3xl sm:text-6xl text-white font-bold text-center'>
+    <section className='flex flex-col w-full'>
+      <div className='flex items-center justify-center text-4xl font-bold text-center text-white homepage-card sm:text-6xl'>
         <motion.div
           className='opacity-75'
           initial='hidden'
@@ -26,7 +26,6 @@ const Home = () => {
           <p>Welcome to Blooms Hair</p>
         </motion.div>
       </div>
-      <Slider />
       <div className=''>
         <HomepageContainer />
       </div>
