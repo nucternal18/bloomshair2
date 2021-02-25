@@ -11,7 +11,7 @@ const images = [
 
 
 const Slider = () => {
-  const [image, setImage] = useState(images);
+  const [image] = useState(images);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const Slider = () => {
   }, [index]);
 
   return (
-    <section className='section bg-black'>
+    <section className='bg-black section'>
       {image.map((image, personIndex) => {
         let position = 'nextSlide';
         if (personIndex === index) {

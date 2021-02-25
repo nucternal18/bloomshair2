@@ -1,5 +1,4 @@
 import React from 'react';
-import { FiPhone, } from 'react-icons/fi'
 import Maps from '../components/GoogleMaps';
 
 const containerStyle = {

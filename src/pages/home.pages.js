@@ -1,12 +1,9 @@
-// @ts-nocheck
 import React from 'react';
 import { motion } from 'framer-motion';
 
 // Containers
 import HomepageContainer from '../Container/HomeCard.container';
 
-// Components
-import Slider from '../components/Slider.js';
 
 const variants = {
   hidden: { opacity: 0 },

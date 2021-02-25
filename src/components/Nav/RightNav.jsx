@@ -36,7 +36,7 @@ const navLink = [
 ];
 
 const RightNav = ({ open, setOpen }) => {
-  const [links, setLinks] = useState(navLink);
+  const [links] = useState(navLink);
   const [value, setValue] = useState(0);
 
   return (
