@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 class ErrorBoundary extends Component {
     constructor() {
-        // @ts-ignore
         super();
 
         this.state = {
