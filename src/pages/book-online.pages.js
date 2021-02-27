@@ -12,6 +12,7 @@ const BookOnline = () => {
     const script = document.createElement('script');
     script.type = 'text/javascript';
     script.language = 'javascript';
+    script.crossOrigin = ""
     script.src =
       'https://www.vagaro.com//resources/WidgetEmbeddedLoader/OZqnC3SqD3OcT3qmV35y6RuSdBuOc1WJD1wOc1WO61Ctdg4tjxMG9pUxapkUcPCu7gevEhAJDXwPW?v=yLVszzzF4Fyeyx4s0YJfhPLt37IcESD3rlFYhU1o30ci#';
     script.async = true;
@@ -21,7 +22,7 @@ const BookOnline = () => {
   }, []);
 
   return (
-    <div className='bg-white flex-grow w-full h-auto'>
+    <div className='flex-grow w-full h-auto bg-white'>
       {loading ? (
         <Spinner />
       ) : (
