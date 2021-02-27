@@ -30,10 +30,10 @@ import './App.css';
 
 const App = () => {
   return (
-    <AuthProvider>
-      <main className='flex flex-col min-h-screen'>
-        <Navbar />
-        <ErrorBoundary>
+    <ErrorBoundary>
+      <AuthProvider>
+        <main className='flex flex-col min-h-screen'>
+          <Navbar />
           <Suspense fallback={<Spinner />}>
             <Switch>
               <Route exact path='/' component={Home} />
@@ -47,10 +47,10 @@ const App = () => {
               <Route exact path='/login' component={Login} />
             </Switch>
           </Suspense>
-        </ErrorBoundary>
-        <Footer />
-      </main>
-    </AuthProvider>
+          <Footer />
+        </main>
+      </AuthProvider>
+    </ErrorBoundary>
   );
 };
 
