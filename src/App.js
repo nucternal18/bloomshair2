@@ -32,19 +32,35 @@ const App = () => {
   return (
     <ErrorBoundary>
       <AuthProvider>
-        <main className='flex flex-col min-h-screen'>
+        <main className='flex flex-col justify-between'>
           <Navbar />
           <Suspense fallback={<Spinner />}>
             <Switch>
-              <Route exact path='/' component={Home} />
-              <Route exact path='/about-us' component={AboutUs} />
-              <Route exact path='/service-menu' component={ServiceMenu} />
-              <Route exact path='/special-offers' component={SpecialOffers} />
-              <Route exact path='/contact-us' component={ContactUs} />
-              <Route exact path='/book-online' component={BookOnline} />
-              <Route exact path='/gallery' component={Gallery} />
+              <Route exact path='/'>
+                <Home />
+              </Route>
+              <Route exact path='/about-us'>
+                <AboutUs/>
+              </Route>
+              <Route exact path='/service-menu' >
+                <ServiceMenu/>
+              </Route>
+              <Route exact path='/special-offers'>
+                <SpecialOffers />
+              </Route>
+              <Route exact path='/contact-us' >
+                <ContactUs />
+              </Route>
+              <Route exact path='/book-online' >
+                <BookOnline />
+              </Route>
+              <Route exact path='/gallery' >
+                <Gallery />
+              </Route>
               <AuthRoute path='/admin' component={Admin} />
-              <Route exact path='/login' component={Login} />
+              <Route exact path='/login' >
+                <Login />
+              </Route>
             </Switch>
           </Suspense>
           <Footer />

@@ -16,7 +16,6 @@ const Login = (props) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const { isError, clearErrors, login, isAuthenticated } = useAuth();
-  const { from } = props.location.state || { from: { pathname: '/admin' } };
 
   useEffect(() => {
     if (isError) {
@@ -33,7 +32,7 @@ const Login = (props) => {
   };
 
   if (isAuthenticated) {
-    return <Redirect to={from} />;
+    return <Redirect to="/admin" />;
   }
 
   return (
