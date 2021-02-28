@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, memo } from 'react';
 
 import {
   GoogleMap,
@@ -40,7 +40,7 @@ const Maps = ({ containerStyle, zoom }) => {
               setSelected(false);
             }}>
             <div>
-              <h1 className='p-2 text-xl bg-black text-white font-bold mb-2'>
+              <h1 className='p-2 mb-2 text-xl font-bold text-white bg-black'>
                 Blooms Hair
               </h1>
               <p className='mb-4 font-thin'>9 Lever Street, London. EC1V 3QU</p>
@@ -52,4 +52,4 @@ const Maps = ({ containerStyle, zoom }) => {
   );
 };
 
-export default React.memo(Maps);
+export default memo(Maps);

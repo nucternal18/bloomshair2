@@ -434,6 +434,14 @@ article.nextSlide {
   color: red;
 }
 
+/* vagaro */
+.vagaro a {
+  font-size:14px; 
+  color:#AAA; 
+  text-decoration:none;
+}
+
+
 @media screen and (min-width: 799px) {
   .google-map {
     height: 40vh;

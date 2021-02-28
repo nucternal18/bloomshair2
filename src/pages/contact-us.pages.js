@@ -1,4 +1,3 @@
-import React from 'react';
 import Maps from '../components/GoogleMaps';
 
 const containerStyle = {
