@@ -1,4 +1,5 @@
 import Maps from '../components/GoogleMaps';
+import {FaFacebook, FaInstagram, FaGoogle} from 'react-icons/fa'
 
 const containerStyle = {
   height: '400px',
@@ -40,19 +41,19 @@ const ContactUs = () => {
             <div className='col-span-1 px-4 py-2 font-bold'>FOLLOW</div>
             <div className='col-span-1 px-4 py-2'>
               <ul className='flex flex-row text-gray-600 '>
-                <li className='px-2 hover:text-blue-500'>
+                <li className='px-2 text-2xl hover:text-blue-500'>
                   <a href='https://www.facebook.com/pages/category/Pizza-Place/Viaromanonsolopizza-108686514250214/'>
-                    <i className='text-2xl fab fa-facebook' />
+                    <FaFacebook/>
                   </a>
                 </li>
-                <li className='px-2 hover:text-blue-500'>
+                <li className='px-2 text-2xl hover:text-blue-500'>
                   <a href='https://www.instagram.com/viaromanonsolopizza/'>
-                    <i className='text-2xl fab fa-instagram' />
+                    <FaInstagram />
                   </a>
                 </li>
-                <li className='px-2 hover:text-blue-500'>
+                <li className='px-2 text-2xl hover:text-blue-500'>
                   <a href='https://www.google.com/maps/place/viaROMAnonsolopizza/@45.7240617,8.6311318,15z/data=!4m5!3m4!1s0x0:0x6dc73345553ebfda!8m2!3d45.7240617!4d8.6311318'>
-                    <i className='text-2xl fab fa-google' />
+                    <FaGoogle />
                   </a>
                 </li>
               </ul>

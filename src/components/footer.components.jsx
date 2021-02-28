@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { FaFacebook, FaInstagram, FaGoogle } from 'react-icons/fa';
 // context
 import { AuthContext } from '../context/context';
 import Maps from './GoogleMaps';
@@ -29,7 +30,10 @@ const Footer = () => {
             <h1 className='mb-4 text-xl font-bold'>OPENING HOURS</h1>
             <ul className='font-thin text-gray-500'>
               <li className='flex justify-between mb-4'>
-                Monday: <p><strong className='ml-6'>Closed</strong></p>
+                Monday:{' '}
+                <p>
+                  <strong className='ml-6'>Closed</strong>
+                </p>
               </li>
               <li className='flex flex-row justify-between mb-4 text-base'>
                 Tuesday:
@@ -93,19 +97,19 @@ const Footer = () => {
             </h1>
             <div className='z-50 mb-6'>
               <ul className='flex flex-row text-white '>
-                <li className='px-1 py-2 m-1 hover:text-blue-500'>
+                <li className='px-1 py-2 m-1 text-xl hover:text-blue-500'>
                   <a href='https://www.facebook.com/pages/category/Pizza-Place/Viaromanonsolopizza-108686514250214/'>
-                    <i className='text-2xl fab fa-facebook' />
+                    <FaFacebook />
                   </a>
                 </li>
-                <li className='px-1 py-2 m-1 hover:text-blue-500'>
-                  <a href='https://www.instagram.com/viaromanonsolopizza/'>
-                    <i className='text-2xl fab fa-instagram' />
+                <li className='px-1 py-2 m-1 text-xl hover:text-blue-500'>
+                  <a href='https://www.instagram.com/blooms_hair/'>
+                    <FaInstagram />
                   </a>
                 </li>
-                <li className='px-1 py-2 m-1 hover:text-blue-500'>
+                <li className='px-1 py-2 m-1 text-xl hover:text-blue-500'>
                   <a href='https://www.google.com/maps/place/viaROMAnonsolopizza/@45.7240617,8.6311318,15z/data=!4m5!3m4!1s0x0:0x6dc73345553ebfda!8m2!3d45.7240617!4d8.6311318'>
-                    <i className='text-2xl fab fa-google' />
+                    <FaGoogle />
                   </a>
                 </li>
               </ul>
