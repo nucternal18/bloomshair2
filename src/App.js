@@ -24,8 +24,8 @@ const ServiceMenu = lazy(() => import('./pages/service-menu.pages'))
 const ContactUs = lazy(() => import('./pages/contact-us.pages'))
 const BookOnline = lazy(() => import('./pages/book-online.pages'))
 // const Gallery = lazy(() => import('./pages/Gallery.pages'))
-const Admin = lazy(() => import('./pages/Admin'));
-const Login = lazy(() => import('./pages/Login'));
+// const Admin = lazy(() => import('./pages/Admin'));
+// const Login = lazy(() => import('./pages/Login'));
 
 
 const App = () => {
@@ -53,11 +53,11 @@ const App = () => {
               </Route>
               {/*<Route exact path='/gallery' >
                 <Gallery />
-              </Route>*/}
+              </Route>
               <AuthRoute path='/admin' component={Admin} />
               <Route exact path='/login' >
                 <Login />
-              </Route>
+              </Route>*/}
             </Switch>
           </Suspense>
           <Footer />
