@@ -23,7 +23,7 @@ const AboutUs = lazy(() => import('./pages/about-us.pages'))
 const ServiceMenu = lazy(() => import('./pages/service-menu.pages'))
 const ContactUs = lazy(() => import('./pages/contact-us.pages'))
 const BookOnline = lazy(() => import('./pages/book-online.pages'))
-const Gallery = lazy(() => import('./pages/Gallery.pages'))
+// const Gallery = lazy(() => import('./pages/Gallery.pages'))
 const Admin = lazy(() => import('./pages/Admin'));
 const Login = lazy(() => import('./pages/Login'));
 
