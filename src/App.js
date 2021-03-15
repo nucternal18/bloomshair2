@@ -51,13 +51,15 @@ const App = () => {
               <Route exact path='/book-online' >
                 <BookOnline />
               </Route>
-              {/*<Route exact path='/gallery' >
+              {/*
+              <Route exact path='/gallery' >
                 <Gallery />
               </Route>
               <AuthRoute path='/admin' component={Admin} />
               <Route exact path='/login' >
                 <Login />
-              </Route>*/}
+              </Route>
+              */}
             </Switch>
           </Suspense>
           <Footer />
