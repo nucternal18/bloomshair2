@@ -51,9 +51,9 @@ const App = () => {
               <Route exact path='/book-online' >
                 <BookOnline />
               </Route>
-//               <Route exact path='/gallery' >
-//                 <Gallery />
-//               </Route>
+              {/*<Route exact path='/gallery' >
+                <Gallery />
+              </Route>*/}
               <AuthRoute path='/admin' component={Admin} />
               <Route exact path='/login' >
                 <Login />
