@@ -23,9 +23,9 @@ const AboutUs = lazy(() => import('./pages/about-us.pages'))
 const ServiceMenu = lazy(() => import('./pages/service-menu.pages'))
 const ContactUs = lazy(() => import('./pages/contact-us.pages'))
 const BookOnline = lazy(() => import('./pages/book-online.pages'))
-// const Gallery = lazy(() => import('./pages/Gallery.pages'))
-// const Admin = lazy(() => import('./pages/Admin'));
-// const Login = lazy(() => import('./pages/Login'));
+const Gallery = lazy(() => import('./pages/Gallery.pages'))
+const Admin = lazy(() => import('./pages/Admin'));
+const Login = lazy(() => import('./pages/Login'));
 
 
 const App = () => {
@@ -51,7 +51,6 @@ const App = () => {
               <Route exact path='/book-online' >
                 <BookOnline />
               </Route>
-              {/*
               <Route exact path='/gallery' >
                 <Gallery />
               </Route>
@@ -59,7 +58,6 @@ const App = () => {
               <Route exact path='/login' >
                 <Login />
               </Route>
-              */}
             </Switch>
           </Suspense>
           <Footer />
