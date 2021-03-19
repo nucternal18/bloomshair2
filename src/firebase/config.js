@@ -5,13 +5,13 @@ import 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API,
-  authDomain: 'bloomshair-e4d4d.firebaseapp.com',
-  databaseURL: 'https://bloomshair-e4d4d.firebaseio.com',
-  projectId: 'bloomshair-e4d4d',
-  storageBucket: 'bloomshair-e4d4d.appspot.com',
-  messagingSenderId: '534331746542',
-  appId: '1:534331746542:web:c97e1871bd5cbe2fc6abff',
-  measurementId: 'G-T09VWDC2L1',
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 /// Initialize Firebase
